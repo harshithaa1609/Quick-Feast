@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff8f0;
+  color: #222;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+
+.navbar {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #e85d04;
+}
+
+.login-button {
+  padding: 11px 24px;
+  border-radius: 25px;
+  background: #e85d04;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 70px 8%;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.welcome-text {
+  color: #e85d04;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: 58px;
+  line-height: 1.08;
+  margin-bottom: 25px;
+}
+
+.description {
+  max-width: 520px;
+  color: #666;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.primary-button,
+.secondary-button {
+  padding: 14px 25px;
+  border-radius: 28px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.primary-button {
+  background: #e85d04;
+  color: white;
+}
+
+.secondary-button {
+  background: white;
+  color: #e85d04;
+  border: 1px solid #e85d04;
+}
+
+/* FOOD CARD */
+
+.food-card {
+  width: 320px;
+  padding: 45px 30px;
+  text-align: center;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.food-emoji {
+  font-size: 110px;
+  margin-bottom: 20px;
+}
+
+.food-card h2 {
+  margin-bottom: 10px;
+}
+
+.food-card p {
+  color: #777;
+  line-height: 1.6;
+}
+
+/* FEATURES */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 20px 8% 70px;
+}
+
+.feature-card {
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card span {
+  font-size: 35px;
+}
+
+.feature-card h3 {
+  margin: 15px 0 8px;
+}
+
+.feature-card p {
+  color: #777;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 5%;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .description {
+    margin: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    padding: 20px 5% 50px;
+  }
+
+  .food-card {
+    width: 100%;
+    max-width: 320px;
+  }
+}
