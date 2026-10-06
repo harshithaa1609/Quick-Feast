@@ -2,14 +2,14 @@ import React, { useRef } from "react";
 import "./home.css";
 
 const foodItems = [
-  {
-    name: "Chicken Biryani",
-    category: "Biryani",
-    price: 120,
-    image:
-      "https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=900&q=80",
-  },
-  {
+{
+  name: "Chicken Biryani",
+  category: "Biryani",
+  price: 120,
+  image:
+    "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=900&q=85",
+},
+{
     name: "Cheese Burger",
     category: "Burgers",
     price: 99,
@@ -45,17 +45,43 @@ const foodItems = [
       "https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&w=900&q=85",
   },
 ];
-
 const categories = [
-  { name: "All", icon: "🍽️" },
-  { name: "Biryani", icon: "🍛" },
-  { name: "Pizza", icon: "🍕" },
-  { name: "Burgers", icon: "🍔" },
-  { name: "Noodles", icon: "🍜" },
-  { name: "Snacks", icon: "🍟" },
-  { name: "Drinks", icon: "🥤" },
+  {
+    name: "All",
+    image:
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=500&q=85",
+  },
+  {
+    name: "Biryani",
+    image:
+      "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=500&q=85",
+  },
+  {
+    name: "Pizza",
+    image:
+      "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=500&q=85",
+  },
+  {
+    name: "Burgers",
+    image:
+      "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=85",
+  },
+  {
+    name: "Noodles",
+    image:
+      "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=500&q=85",
+  },
+  {
+    name: "Snacks",
+    image:
+      "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=500&q=85",
+  },
+  {
+    name: "Drinks",
+    image:
+      "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=500&q=85",
+  },
 ];
-
 function Home() {
   const sliderRef = useRef(null);
 
@@ -80,6 +106,7 @@ function Home() {
       <nav className="navbar">
         <div className="logo">
           <div className="logo-icon">🍴</div>
+
           <span>
             Quick<span>Feast</span>
           </span>
@@ -181,6 +208,8 @@ function Home() {
         </div>
       </section>
 
+      // ...existing code...
+
       {/* CATEGORY SECTION */}
       <section className="category-section">
         <div className="section-heading">
@@ -192,14 +221,12 @@ function Home() {
 
         <div className="categories">
           {categories.map((category) => (
-            <button
-              className="category-card"
-              key={category.name}
-            >
-              <div className="category-icon">
-                {category.icon}
-              </div>
-
+            <button className="category-card" key={category.name}>
+              <img
+                className="category-image"
+                src={category.image}
+                alt={category.name}
+              />
               <span>{category.name}</span>
             </button>
           ))}
@@ -343,9 +370,12 @@ function Home() {
         </div>
 
         <div className="benefits">
+
           <div className="benefit-card">
             <div>⚡</div>
+
             <h3>Skip the Queue</h3>
+
             <p>
               Order before you reach the canteen.
             </p>
@@ -353,7 +383,9 @@ function Home() {
 
           <div className="benefit-card">
             <div>🍱</div>
+
             <h3>Fresh Food</h3>
+
             <p>
               Enjoy freshly prepared campus meals.
             </p>
@@ -361,7 +393,9 @@ function Home() {
 
           <div className="benefit-card">
             <div>📍</div>
+
             <h3>Track Orders</h3>
+
             <p>
               Know when your food is ready.
             </p>
@@ -369,11 +403,14 @@ function Home() {
 
           <div className="benefit-card">
             <div>💳</div>
+
             <h3>Easy Payments</h3>
+
             <p>
               Simple and secure checkout.
             </p>
           </div>
+
         </div>
       </section>
 
@@ -387,12 +424,11 @@ function Home() {
           Your campus. Your food. Your way.
         </p>
 
-        <div className="footer-links">
-          <a href="#home">Home</a>
-          <a href="#menu">Menu</a>
-          <a href="#orders">Orders</a>
-          <a href="#track">Track Order</a>
-        </div>
+       <div className="footer-links">
+  <a href="#">Harshitha</a>
+  <a href="#">Sravani</a>
+  <a href="#">Siri</a>
+</div>
 
         <p className="copyright">
           © 2026 Quick Feast. Made for students.
